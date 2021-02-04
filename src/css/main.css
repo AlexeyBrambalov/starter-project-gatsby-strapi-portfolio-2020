@@ -198,10 +198,12 @@ p {
   font-size: 1.75rem;
   color: var(--clr-grey-1);
   transition: var(--transition);
+  filter: drop-shadow(3px 3px 5px var(--clr-primary-5));
 }
 .social-link:hover {
   color: var(--clr-primary-5);
 }
+
 /*
 =============== 
 Navbar
@@ -410,7 +412,7 @@ Hero
   margin-top: -5rem;
   padding-top: 5rem;
   height: 100vh;
-  background: var(--clr-primary-10);
+  background: var(--clr-primary-9);
   position: relative;
 }
 
@@ -425,7 +427,7 @@ Hero
   margin-left: 0;
 }
 .hero-info {
-  background: var(--clr-primary-10);
+  margin-top: -15%;
 }
 .hero-img {
   display: none;
@@ -438,6 +440,17 @@ Hero
 }
 .hero .btn {
   margin-top: 1.25rem;
+}
+
+.hero-container {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 3em;
+  border-radius: 3em;
+  backdrop-filter: blur(10px);
+  border: solid 2px transparent;
+  background-clip: padding-box;
+  box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.3);
+  width: 60vw;
 }
 
 @media screen and (min-width: 992px) {
@@ -463,8 +476,11 @@ Hero
   }
   .hero-img {
     display: block;
-    grid-row: 1/1;
-    grid-column: 6/-1;
+    grid-row: 2/-1;
+    grid-column: 7/0;
+    width: 13vw;
+    border-radius: 50%;
+    margin-top: -80%;
   }
 }
 @media screen and (min-width: 1170px) {
@@ -695,6 +711,12 @@ Projects
 .about-stack span {
   margin-top: 0.5rem;
 }
+.about-stack span:hover {
+  background-color: #2caeba;
+  color: #fff;
+  transition-timing-function: ease-in;
+  transition: 0.5s;
+}
 .project-icon {
   color: var(--clr-primary-5);
   font-size: 1.25rem;
@@ -754,6 +776,7 @@ Blog
 .blog {
   display: block;
   margin-bottom: 2rem;
+  padding: 1em;
   background: var(--clr-grey-10);
   border-radius: var(--radius);
   box-shadow: var(--light-shadow);
@@ -894,7 +917,11 @@ About Page
 }
 .about-img {
   margin-bottom: 2rem;
-  height: 25rem;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .about-text .section-title {
   margin-bottom: 2rem;
